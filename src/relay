@@ -5,9 +5,6 @@ void delay_ms(uint32_t ms);
 void GPIOA_Init(void);
 void GPIOB_Input_Init(void);
 
-void SystemInit(void) {
-    // Default system init
-}
 
 // Relay control pin = PA8
 void GPIOA_Init(void) {
@@ -59,7 +56,5 @@ int main(void) {
 
 // Simple software delay (approximate)
 void delay_ms(uint32_t ms) {
-    for (uint32_t i = 0; i < ms * 40000; i++) {
-        __NOP();
-    }
+    for (uint32_t i = 0; i < ms * 40000; i++) 
 }
